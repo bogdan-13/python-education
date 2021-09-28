@@ -55,7 +55,6 @@ class Calculator:
         :return: add two numbers
         :rtype: float
         """
-        try:
-            return divided / divider
-        except ZeroDivisionError:
-            return 'Divider is zero'
+        if divider == 0:
+            raise ZeroDivisionError
+        return divided / divider
