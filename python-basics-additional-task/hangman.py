@@ -14,8 +14,7 @@ while True:
         break
 
 if menu_item == '1':
-    word = get_word()
-    game(word)
+    game(get_word())
 elif menu_item == '2':
     show_past_words()
 
