@@ -1,18 +1,23 @@
-from hangman_picture import HANGMAN_PICTURE
-from hangman_functions import *
+from hangman_lib import *
 
 
 print('WELCOME TO HANGMAN')
 
 
 while True:
-    menu_item = input('Оберіть пункт меню:\n1.Почати гру\n2.Показати минулі слова\n3.Вихід\n')
-    if menu_item in ('1', '2', '3'):
+    menu_item = input('Оберіть пункт меню:'
+                      '\n1. Почати гру'
+                      '\n2. Показати минулі слова'
+                      '\n3. Очистити історію гри'
+                      '\n4. Вихід\n')
+    if menu_item in ('1', '2', '3', '4'):
         break
 
 if menu_item == '1':
-    print('GAME')
+    word = get_word()
+    game(word)
 elif menu_item == '2':
-    print('Show words')
+    show_past_words()
+
 elif menu_item == '3':
-    print('exit')
+    clean_history()
